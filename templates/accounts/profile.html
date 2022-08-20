@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Profil - {{ block.super }}
+{% endblock %}
+
+    {% block body %}
+
+       <div class="container">
+           <div class="row">
+                <div class="col-sm-6 col-md-6 col-md-offset-3">
+                  <div class="thumbnail">
+                       <div class="caption">
+
+                            <h1 class="font-weight-light my-4 text-center">Profil</h1>
+                            <div class="form-group">
+                                <span> Kullanıcı Adı </span>
+                                <div> {{user}} </div>
+                            </div>
+
+                            <div class="form-group">
+                                <span> Ad Soyad  </span>
+                                <div> {{user.first_name}} {{user.last_name}} </div>
+                            </div>
+
+                            <div class="form-group">
+                                <span> Email  </span>
+                                <div> {{user.email}} </div>
+                            </div>
+
+
+                         </div>
+                 </div>
+            </div>
+       </div>
+
+    {% endblock %}

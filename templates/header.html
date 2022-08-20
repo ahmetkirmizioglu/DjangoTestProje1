@@ -1,0 +1,41 @@
+<nav class="navbar navbar-inverse navbar-fixed-top rose shadow" role="navbar">
+    <div class="container">
+
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="{% url 'home' %}" class="navbar-brand"><span class="white">İş Portal - {{ request.user.get_full_name }}</span></a>
+        </div>
+
+        <nav class="collapse navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav navbar-right">
+                {% if request.user.is_authenticated %}
+                    <li><a href="{% url 'post:create' %}"><span class="white">İlan Ekle</span></a></li>
+                {% endif %}
+                <li><a href="{% url 'post:index' %}"><span class="white">İş İlanları</span></a></li>
+                {% if not request.user.is_authenticated %}
+                    <li><a href="{% url 'accounts:register' %}"><span class="white">Üye Ol</span></a></li>
+                    <li><a href="{% url 'accounts:login' %}"><span class="white">Giriş</span></a></li>
+                {% else %}
+                    <li class="dropdown1">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="white">Profil</span>
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                           <li><a href="{% url 'accounts:profile' %}">Göster</a></li>
+                           <li><a href="#"><span>Düzenle</span></a></li>
+                           <li><a href="{% url 'accounts:change_password' %}"><span>Şifre Değiştir</span></a></li>
+                        </ul>
+                      </li>
+
+                    <li><a href="{% url 'accounts:logout' %}"><span class="white">Çıkış</span></a></li>
+                {% endif %}
+            </ul>
+        </nav>
+
+    </div>
+</nav>
+

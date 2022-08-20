@@ -1,0 +1,36 @@
+#slider {
+    margin: 0;
+    position: relative;
+    width: 100%;
+	height:auto;
+	max-height:500px;
+
+}
+
+#slider > div {
+    position: absolute;
+	width: 100%;
+    height:auto;
+	max-height:500px;
+
+}
+
+#slider > div > img {
+    width: 98%;
+    height:auto;
+	max-height:500px;
+	border: 2px solid #323232;
+	padding: 10px;
+	border-radius: 25px;
+}
+
+.s24 {
+font-size:24px;
+}
+
+.em12 {
+font-size:12px;
+font-weight:normal
+}
+
+.ptb20 { padding-top:10px; padding-bottom:10px;}

@@ -1,0 +1,36 @@
+html,
+body {
+  height: 100%;
+  padding-top: 40px;
+  background-color:#eaeaea;
+}
+
+.white {
+	color:#ffffff;
+}
+
+.rose {
+background-color:#BC1D53;
+border:1px solid #BC1D53;
+}
+
+.rose:hover {
+background-color:#BC1D53;
+border:1px solid #BC1D53;
+}
+
+
+.shadow {
+-webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.31);
+-moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.31);
+box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.31);
+}
+
+.post_title  {
+color:#BC1D53;
+}
+
+.post_title a {
+text-decoration:none;
+color:#BC1D53;
+}

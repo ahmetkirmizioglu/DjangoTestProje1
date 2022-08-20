@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Anasayfa - {{ block.super }}
+{% endblock %}
+
+    {% block body %}
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12" style="margin-bottom:10px;">
+                    <form role="search" method="GET" action="/post/index/?q=">
+                        <div class="input-group" >
+                            <input class="form-control shadow"  style="height:60px;font-size:20px;" type="text" name="q" placeholder="Buraya aradığın poziyonları yazarak sana uygun ilanları listeyebilirsin" value="{{ request.GET.q }}" >
+                            <span class="input-group-btn">
+                                <input class="btn rose shadow" type="submit" style="color:#fff;height:60px;height:60px;font-size:20px;" value="Ara">
+                            </span>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+
+            <div class="row">
+                    <div class="col-md-12 col-sm-12" id="slider">
+                        <div>
+                           <img alt="slider" src="/static/img/slider_1.jpg">
+                        </div>
+                        <div>
+                            <img alt="slider" src="/static/img/slider_2.jpg">
+                        </div>
+                        <div>
+                            <img alt="slider" src="/static/img/slider_3.jpg">
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+
+
+    {% endblock %}
